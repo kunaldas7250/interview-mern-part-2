@@ -12,12 +12,19 @@ const Question = () => {
   const [score, setScore] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
   const [seconds, setSeconds] = useState(0);
-
+const time_limit=10
   // Timer per question
   useEffect(() => {
     setSeconds(0);
     const interval = setInterval(() => {
-      setSeconds((prev) => prev + 1);
+      setSeconds((prev) => {
+        if(prev+1>=time_limit){
+            clearInterval(interval)
+            handleNext()
+            return 0
+        }
+       return prev + 1
+      });
     }, 1000);
     return () => clearInterval(interval);
   }, [current]);
@@ -61,7 +68,7 @@ const Question = () => {
       {/* Main Question */}
       <div className="question">
         <p className="timer">
-          Time: {seconds} second{seconds !== 1 ? "s" : ""}
+          Time: {seconds}s / {time_limit}s
         </p>
         <h3>
           Question {current + 1}: {questions[current].question}
