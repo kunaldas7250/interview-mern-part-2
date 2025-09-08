@@ -1,0 +1,91 @@
+/* Container */
+.navparentquizz {
+  width: 100%;
+  height: 100vh;
+  background: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: Arial, sans-serif;
+}
+
+/* Child box */
+.navchild {
+  width: 100%;
+  height: auto;
+  max-width: 900px;
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Navbar */
+.navbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: #0077ff;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Profile section */
+.profile {
+  position: relative;
+}
+
+.profile button {
+  background: #fff;
+  color: #0077ff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.profile button:hover {
+  background: #e6f0ff;
+}
+
+/* Dropdown */
+.profiletext {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: #fff;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 12px 18px;
+  width: 180px;
+  text-align: left;
+  z-index: 10;
+}
+
+.profiletext p {
+  margin: 0 0 10px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Logout button */
+.logout button {
+  width: 100%;
+  padding: 6px 12px;
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.logout button:hover {
+  background: #e60000;
+}

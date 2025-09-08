@@ -1,0 +1,216 @@
+/* =================== Container =================== */
+.navparentquizz, .quizz {
+  width: 100%;
+  height: 200px;
+  background: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: Arial, sans-serif;
+}
+
+/* =================== Child Box =================== */
+.navchild {
+  width: 100%;
+  height: auto;
+  max-width: 900px;
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* =================== Navbar =================== */
+.navbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: #0077ff;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Profile Section */
+.profile {
+  position: relative;
+}
+
+.profile button {
+  background: #fff;
+  color: #0077ff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.profile button:hover {
+  background: #e6f0ff;
+}
+
+/* Profile Dropdown */
+.profiletext {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: #fff;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 12px 18px;
+  width: 180px;
+  text-align: left;
+  z-index: 100;
+}
+
+.profiletext p {
+  margin: 0 0 10px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Logout Button */
+.logout button {
+  width: 100%;
+  padding: 6px 12px;
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.logout button:hover {
+  background: #e60000;
+}
+
+/* =================== Quiz Layout =================== */
+.quizz {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* =================== Sidebar =================== */
+.sidebar {
+  height: 540px; /* fit all questions */
+  min-width: 450px; /* enough width to avoid scroll */
+  background: #0077ff;
+  color: #fff;
+  padding: 10px;
+  border-right: 2px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Question Numbers Grid */
+.questionbox {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.questionbox div {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  color: #0077ff;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Hover + Active */
+.questionbox div:hover,
+.questionbox div.active {
+  background: #005fcc;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* =================== Question Section =================== */
+.question {
+  flex: 1;
+  padding: 30px;
+  background: #fff;
+  border-radius: 8px;
+  margin: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Timer */
+.question p.timer {
+  font-weight: bold;
+  color: #0077ff;
+  margin-bottom: 15px;
+}
+
+/* Question Text */
+.question h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* =================== Answer Options =================== */
+.answer {
+  margin-top: 15px;
+}
+
+.answer label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.answer input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* =================== Correct Answer Box =================== */
+.correctanswer {
+  margin-top: 20px;
+  padding: 12px;
+  background: #e6f9e6;
+  border: 1px solid #33cc33;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #2d862d;
+}
+
+.correctanswer button {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #0077ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.correctanswer button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+/* =================== Score =================== */
+.score {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #444;
+}
